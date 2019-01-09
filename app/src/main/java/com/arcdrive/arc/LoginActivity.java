@@ -18,6 +18,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        final Intent intent1 = new Intent(this, ApplicationActivity.class);
+        final Intent intent2 = new Intent(this, LoginSignupActivity.class);
 
         arrowButton = (ImageButton) findViewById(R.id.arrowButton);
         arrowNoBorder = (Button) findViewById(R.id.button4);
@@ -25,26 +27,15 @@ public class LoginActivity extends AppCompatActivity {
         arrowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openApplicationActivity();
+                startActivity(intent1);
             }
         });
 
         arrowNoBorder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLoginSignupActivity();
+                startActivity(intent2);
             }
         });
     }
-
-    public void openLoginSignupActivity() {
-        Intent intent = new Intent(this, LoginSignupActivity.class);
-        startActivity(intent);
-    }
-
-    public void openApplicationActivity() {
-        Intent intent = new Intent(this, ApplicationActivity.class);
-        startActivity(intent);
-    }
-
 }

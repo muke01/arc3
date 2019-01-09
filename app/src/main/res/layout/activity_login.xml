@@ -16,8 +16,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="184dp"
         android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName" />
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editText3"
@@ -28,8 +29,9 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="-179dp"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/button"
@@ -62,7 +64,7 @@
         android:layout_marginTop="-23dp"
         android:layout_marginEnd="52dp"
         android:alpha="0.7"
-        android:text="Forgot password?"
+        android:text="@string/forgot_password"
         android:textColor="#FFFFFF"
         android:textSize="8dp" />
 
@@ -74,7 +76,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="25dp"
         android:layout_marginTop="23dp"
-        android:background="@drawable/arrow_noborder" />
+        android:background="@drawable/arrow_noborder"
+        android:contentDescription="@string/todo" />
 
     <Button
         android:id="@+id/button4"

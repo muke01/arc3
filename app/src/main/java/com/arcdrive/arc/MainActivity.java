@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final Intent intent = new Intent(this, LoginSignupActivity.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -36,35 +37,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTick(long millisUntilFinished) {
                 mTimeLeftInMillis = millisUntilFinished;
-                updateCountDownText();
+                int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
+                int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
+                if (seconds == 56 && minutes == 9) {
+                    startActivity(intent);
+                }
             }
 
             @Override
             public void onFinish() {
             }
         }.start();
-
-        updateCountDownText();
-    }
-
-
-    private void updateCountDownText() {
-        int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
-        int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
-        if(seconds == 56 && minutes == 9) {
-            openLoginSignupActivity();
-        }
-
-        String timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
-
-        mTextViewCountDown.setText(timeLeftFormatted);
-    }
-
-
-
-    public void openLoginSignupActivity() {
-        Intent intent = new Intent(this, LoginSignupActivity.class);
-        startActivity(intent);
     }
 
 }
