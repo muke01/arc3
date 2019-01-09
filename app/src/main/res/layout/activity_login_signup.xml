@@ -31,7 +31,7 @@
         android:layout_marginTop="-136dp"
         android:background="@drawable/rounded_button_fill"
         android:text="Login"
-        android:textColor="#1bb687"
+        android:textColor="#2fadde"
         tools:layout_editor_absoluteX="67dp"
         tools:layout_editor_absoluteY="435dp" />
 

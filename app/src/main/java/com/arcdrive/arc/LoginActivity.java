@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 public class LoginActivity extends AppCompatActivity {
 
     private ImageButton arrowButton;
-    private ImageButton arrowNoBorder;
+    private Button arrowNoBorder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         arrowButton = (ImageButton) findViewById(R.id.arrowButton);
-        arrowNoBorder = (ImageButton) findViewById(R.id.arrowNoBorder);
+        arrowNoBorder = (Button) findViewById(R.id.button4);
 
         arrowButton.setOnClickListener(new View.OnClickListener() {
             @Override
